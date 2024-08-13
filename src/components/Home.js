@@ -4,7 +4,11 @@ import '../styles/Home.css';
 import services1 from '../images/home-services-1.png';
 import services2 from '../images/home-services-2.png';
 import services3 from '../images/home-services-3.png';
+import why1 from '../images/why1.png';
+import why2 from '../images/why2 (1).png';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+
 
 function Home() {
   return (
@@ -36,6 +40,31 @@ function Home() {
             <ArrowCircleRightIcon style={{height:50, width:50, color:"white"}}/>
           </div>
         </div>
+      </div> 
+      <div className='home-why'>
+        <div className='home-why-vertical'>
+          <img className="why1"src={why1} alt="why1" />
+          <div className='my-properties'>
+            <p style={{fontFamily:"Bold", fontSize:24}}>Properties for sale</p>
+            <p style={{fontFamily:"Bold", fontSize:28}}>14K</p>
+          </div>
+        </div>
+        
+        <img className="why2" src={why2} alt="why2"/>
+        <div className='why-text'>
+          <p style={{fontFamily:"Bold", fontSize:36}}>Why You Should Work
+          With Us</p>
+          <p style={{fontFamily:"Light", fontSize:22}}>We aim to ease the process of searching houses and build a community where your perfect home is just a click away </p>
+          <ul className='home-why-list'>
+            <li style={{fontFamily:"Bold", fontSize:18}}>100% Secure</li>
+            <li style={{fontFamily:"Bold", fontSize:18}}>Wide Range of Properties</li>
+            <li style={{fontFamily:"Bold", fontSize:18}}>Buy or Rent Homes</li>
+            <li style={{fontFamily:"Bold", fontSize:18}}>Trusted by Thousands</li>
+
+          </ul>
+          <button className='learn-more-button'>Learn more <ArrowRightAltIcon style={{color:'white'}} /></button>
+        </div>
+
       </div> 
     </div> 
   )
