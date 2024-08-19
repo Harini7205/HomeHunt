@@ -5,9 +5,18 @@ import services1 from '../images/home-services-1.png';
 import services2 from '../images/home-services-2.png';
 import services3 from '../images/home-services-3.png';
 import why1 from '../images/why1.png';
-import why2 from '../images/why2 (1).png';
+import why2 from '../images/why2.png';
+import fp1 from '../images/fp-1.png';
+import fp2 from '../images/fp-2.png';
+import fp3 from '../images/fp-3.png';
+import test1 from '../images/home-test-1.png';
+import test2 from '../images/home-test-2.png';
+import test3 from '../images/home-test-3.png';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import FeaturedProperty from './FeaturedProperty';
+import Footer from './Footer';
+import Testimonial from './Testimonial';
 
 
 function Home() {
@@ -64,8 +73,70 @@ function Home() {
           </ul>
           <button className='learn-more-button'>Learn more <ArrowRightAltIcon style={{color:'white'}} /></button>
         </div>
-
       </div> 
+      <div className='home-featured-properties'>
+        <div className='home-fp-title'>
+          <h2 className='fp-title-home'>Featured Properties</h2>
+          <button className='home-fp-button'>View all properties</button>
+        </div>
+        <div className='featured-properties'>
+        <FeaturedProperty 
+          img={fp1} 
+          title="Seaside Serenity Villa"
+          desc="A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More"
+          bedroom="4"
+          bathroom="3"
+          type="Villa"
+          price="$550,000"
+        />
+        <FeaturedProperty 
+          img={fp3} 
+          title="Metropolitan Haven"
+          desc="A chic and fully-furnished 2-bedroom apartment with panoramic city views... Read More"
+          bedroom="2"
+          bathroom="2"
+          type="Villa"
+          price="$300,000"
+        />
+        <FeaturedProperty 
+          img={fp2} 
+          title="Rustic Retreat Cottage"
+          desc="An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More"
+          bedroom="3"
+          bathroom="3"
+          type="Villa"
+          price="$450,000"
+        />
+        </div>
+      </div>
+      <div className='home-testimonials'>
+        <div className='home-testimonial-title'>
+          <h2 className='testimonial-title-home'>Testimonials</h2>
+          <button className='home-testimonial-button'>View all</button>
+        </div>
+        <div className='testimonials'>
+          <Testimonial 
+            img={test1}
+            name="Rodriguez Millo"
+            place="Puorto Lobos, Mexico"
+            content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
+          />
+          <Testimonial 
+            img={test2}
+            name="Victenzy Markov"
+            place="Moscow, Russia"
+            content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
+          />
+          <Testimonial 
+            img={test3}
+            name="Carla Newton"
+            place="Seattle, America"
+            content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
+          />
+
+        </div>
+      </div>
+      <Footer />
     </div> 
   )
 }

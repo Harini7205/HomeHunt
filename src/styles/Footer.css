@@ -1,0 +1,17 @@
+.footer{
+    background-color: black;
+    height: 110px;
+    width:100%;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-logo{
+    font-size:32px;
+}
+.footer-row-options{
+    display:flex;
+    justify-content: space-evenly;
+    gap:20px;
+}

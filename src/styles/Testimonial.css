@@ -1,0 +1,37 @@
+.testimonial{
+    width:430px;
+    background-color: #62C9D0B3;
+    display:flex;
+    gap:20px;
+    padding:20px;
+    border-radius: 30px;
+}
+.testimonial-left{
+    width:130px;
+    padding-left:10px;
+}
+.testimonial-img{
+    height:124px;
+    width:124px;
+    border-radius: 50%;
+}
+.testimonial-person-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.testimonial-person-desc p{
+    padding:0;
+    margin:0;
+}
+.testimonial-person-name{
+    font-weight:bold;
+    font-size:24px;
+}
+.testimonial-person-place{
+    font-size:18px;
+    opacity:0.7;
+}
+.testimonial-content{
+    font-size:18px;
+}
