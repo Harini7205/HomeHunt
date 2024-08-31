@@ -1,0 +1,51 @@
+/* Sidebar setup */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 40px);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    overflow: hidden;
+    padding: 10px 0; /* Reduces padding to minimize sidebar space */
+  }
+
+  .sidebar:hover{
+    transform: scale(1.01); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  }
+  
+  /* User Profile styling */
+  .user-profile {
+    padding: 10px 20px; /* Reduced padding for user profile section */
+    margin-bottom: 10px; /* Adjusted margin to reduce space below user profile */
+    text-align: center;
+  }
+  
+  /* Sidebar item styling */
+  .menu-items {
+    padding: 0;
+    margin-top: 0; /* Removed top margin to minimize space */
+  }
+  
+  .menu-item {
+    padding: 10px 20px; /* Reduced padding for menu items */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #fff; /* Ensures text is visible */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+  
+  .menu-item:hover {
+    background-color: #444; /* Change background color on hover */
+    border-radius: 8px; /* Adds some rounded corners on hover */
+  }
+  
