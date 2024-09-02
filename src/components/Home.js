@@ -46,7 +46,7 @@ function Home() {
             <p style={{fontFamily:"Light", fontWeight:700, fontSize:28}}>Explore our wide variety of properties to fid your dream home today</p>
             <p style={{fontFamily:"Light", fontWeight:700, fontSize:28}}>Available at</p>
             <p style={{fontFamily:"Bold", fontSize:36}}>20+ cities all over Tamil Nadu</p>
-            <ArrowCircleRightIcon style={{height:50, width:50, color:"white"}}/>
+            <ArrowCircleRightIcon style={{height:50, width:50, color:"white"}} className="arrow-circle-right-button" />
           </div>
         </div>
       </div> 

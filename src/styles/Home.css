@@ -119,6 +119,14 @@
     align-self: center;
     padding:10px 20px;
     border-radius: 10px;
+    &:hover{
+        cursor:pointer;
+    }
+}
+.arrow-circle-right-button{
+    &:hover{
+        cursor:pointer;
+    }
 }
 .why-text{
     height:538px;
@@ -162,6 +170,9 @@
     align-self: center;
     padding:20px;
     border-radius: 10px;
+    &:hover{
+        cursor:pointer;
+    }
 }
 .featured-properties,.testimonials{
     display:flex;

@@ -1,0 +1,19 @@
+.propertydetails-propertydet{
+    
+    font-weight:light;
+    font-size:18px;
+    width:400px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+.prope4rtydetails-prop{
+    font-weight:bold;
+    font-size:18px; 
+    
+}
+.propertydetails-propertydet-bd{
+    height:17px;
+    width:24px;
+    border-radius: 50%;}
