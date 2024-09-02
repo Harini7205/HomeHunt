@@ -18,7 +18,7 @@ function App() {
     leftSection: {
       flex: 1,
       background: `url(${homeImage}) no-repeat center center`, // Set the image as the background
-      backgroundSize: 'cover',
+      backgroundSize: '100%',
     },
     rightSection: {
       flex: 1,
