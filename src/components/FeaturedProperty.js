@@ -3,6 +3,7 @@ import VillaIcon from '@mui/icons-material/Villa';
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import '../styles/FeaturedProperty.css';
+import {Link} from 'react-router-dom';
 
 function FeaturedProperty({img,title,desc,bedroom,bathroom,type,price}) {
   return (
@@ -20,7 +21,7 @@ function FeaturedProperty({img,title,desc,bedroom,bathroom,type,price}) {
             <p>Price</p>
             <p>{price}</p>
         </div>
-        <button className='fp-view-button'>View Property Details</button>
+        <Link to={'/viewprop'}><button className='fp-view-button'>View Property Details</button></Link>
       </div>
     </div>
   )

@@ -43,132 +43,113 @@
   margin-top: 20px;
 }
 .left-half-property-details{
-    width:50%;
-    display:flex;
-    flex-direction: column;
-    gap:50px;
+  width:50%;
+  display:flex;
+  flex-direction: column;
+  gap:50px;
 } 
 .right-half-property-details{
-    width:50%;
-    height:fit-content;
+  width:50%;
+  height:fit-content;
 }
 .description-container, .features-container, .testimonials-container {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
 }
-
-
-  .property-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .stat {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-left: 1px solid black;
-    padding-left:20px;
-  }
-  .stat:first-of-type{
-    border-left:none;
-  }
-  
-  .features-container ul {
-    list-style-type: none;
-    padding: 0;
-
-  }
-  
-  .features-container li {
-    background-color: #62C9D0B3;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
-  }
-  
-  .testimonials-container {
-    
-    padding: 20px;
-    
-  }
-  
-  .testimonial {
-    background-color: #62C9D0B3;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    border-radius: 10px;
-    margin:20px;
-    padding: 20px;
-  }
-  
-  .testimonial-image {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    align-self: flex-start;
-  }
-  
-  .testimonial-content blockquote {
-    margin: 0;
-    font-style: italic;
-  }
-  
-  .user-profile {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-profile img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .property-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    background-color:lavender;
-    padding: 40px 20px;
-    width:900px;
-    margin:10px auto;
-  }
-  
-  .image-thumbnails {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    padding:  20px;
-    background-color:#d1c4e9;
-  }
-  
-  .image-thumbnails img {
-    width: 100px;
-    height: auto;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s;
-  }
-  
-  .image-thumbnails img.active {
-    border: 2px solid blue;
-    transform: scale(1.05);
-  }
-  
-  .selected-image img {
-    width: 600px;
-    height: auto;
-    border-radius: 8px;
-  }
-  .seaside{
-     font-weight:lighter;
-  }
+.property-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 1px solid black;
+  padding-left:20px;
+}
+.stat:first-of-type{
+  border-left:none;
+}
+.features-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+.features-container li {
+  background-color: #62C9D0B3;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}  
+.testimonials-container {  
+  padding: 20px;
+}  
+.testimonial {
+  background-color: #62C9D0B3;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border-radius: 10px;
+  margin:20px;
+  padding: 20px;
+}  
+.testimonial-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  align-self: flex-start;
+}
+.testimonial-content blockquote {
+  margin: 0;
+  font-style: italic;
+}  
+.user-profile {
+  display: flex;
+  align-items: center;
+}  
+.user-profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.property-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  background-color:lavender;
+  padding: 40px 20px;
+  width:900px;
+  margin:10px auto;
+}  
+.image-thumbnails {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding:  20px;
+  background-color:#d1c4e9;
+}  
+.image-thumbnails img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+} 
+.image-thumbnails img.active {
+  border: 2px solid blue;
+  transform: scale(1.05);
+}  
+.selected-image img {
+  width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+.seaside{
+  font-weight:lighter;
+}
   

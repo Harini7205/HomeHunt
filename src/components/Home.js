@@ -17,7 +17,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FeaturedProperty from './FeaturedProperty';
 import Footer from './Footer';
 import Testimonial from './Testimonial';
-
+import {Link} from "react-router-dom";
 
 function Home() {
   return (
@@ -27,10 +27,12 @@ function Home() {
         <div className='text-home-page'>
           <h2 className='catchy-text'>Live Where You Love</h2>
           <p className='subcaption'>Turning Houses Into Homes</p>
+          <Link to={'/signin'}>
           <div className='home-page-button-container'>
             <button className='signup'>Sign Up</button>
             <button className='signin'>Sign In</button>
           </div>
+          </Link>
         </div> 
       </div>   
       <div className="home-services">

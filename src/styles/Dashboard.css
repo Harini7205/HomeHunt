@@ -1,0 +1,77 @@
+/* Container setup */
+.container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+/* Main content area setup */
+.mainContent {
+  margin-left: 290px;
+  padding: 20px;
+  width: calc(100% - 290px);
+}
+
+/* Dashboard and Calendar Container */
+.dashboard-container {
+  display: flex; /* Display as flexbox to make them inline */
+  gap: 20px; /* Space between dashboard and calendar */
+  align-items: flex-start; /* Align items at the start */
+  margin-bottom: 40px;
+}
+
+/* Dashboard statistics boxes */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap:50px; /* Stack the dashboard boxes vertically */
+  width: 80%;
+}
+
+.dashboard-box {
+  width:300px;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  color: #fff; /* Ensures text is readable */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;/* Fixed width for uniformity */
+}
+
+
+/* Assigning different colors to each box */
+.box1 {
+  background-color: #4caf50; /* Green */
+}
+
+.box2 {
+  background-color: #2196f3; /* Blue */
+}
+
+.box3 {
+  background-color: #ff9800; /* Orange */
+}
+
+.box4 {
+  background-color: #e91e63; /* Pink */
+}
+
+/* Calendar Container */
+.calendar-container {
+  width: 50%; /* Set a fixed width for the calendar */
+  margin-left: 20px;
+  /* Space between dashboard and calendar */
+}
+
+.react-calendar {
+  border: none; /* Remove default border for better UI integration */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better separation */
+  border-radius: 8px; /* Rounded corners for the calendar */
+  height: 320px; 
+}

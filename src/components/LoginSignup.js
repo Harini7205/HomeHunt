@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import homeImage from './Assets/home.png';
+import homeImage from '../images/home.png';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -90,7 +91,7 @@ function App() {
         {/* The image is now being used as a background for this section */}
       </div>
       <div style={commonStyles.rightSection}>
-        <button style={commonStyles.returnHomeBtn}>Return Home</button>
+        <Link to={'/'}><button style={commonStyles.returnHomeBtn}>Return Home</button></Link>
         {isSignUp ? <SignUpPage togglePage={togglePage} styles={commonStyles} /> : <SignInPage togglePage={togglePage} styles={commonStyles} />}
       </div>
     </div>
@@ -106,12 +107,12 @@ function SignInPage({ togglePage, styles }) {
         <input type="password" placeholder="Password" style={styles.input} required />
         <button type="submit" style={styles.button}>Login</button>
         <div style={styles.extraOptions}>
-          <a href="#" style={{ color: '#000' }}>Forgot Password?</a>
+          <a href="/forgot" style={{ color: '#000' }}>Forgot Password?</a>
           <p>Don't have an account? <span onClick={togglePage} style={styles.link}>Sign Up Now</span></p>
         </div>
       </form>
       <div style={styles.roleSelection}>
-        <button style={styles.roleBtn}>House Owner</button>
+        <Link to={'/dashboard'}><button style={styles.roleBtn}>House Owner</button></Link>
         <button style={styles.roleBtn}>Tenant</button>
       </div>
     </div>

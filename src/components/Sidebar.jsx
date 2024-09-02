@@ -1,6 +1,6 @@
 import React from 'react';
 import UserProfile from './UserProfile';
-import './Sidebar.css'; // Import the CSS file for sidebar styles
+import '../styles/Sidebar.css'; // Import the CSS file for sidebar styles
 
 const Sidebar = () => {
   return (

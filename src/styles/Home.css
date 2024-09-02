@@ -39,6 +39,7 @@
     border:none;
     outline:none;
     border-radius:30px;
+    text-decoration-line: none;
     &:hover{
         cursor:pointer;
     }

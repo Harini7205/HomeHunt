@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import '../styles/propertydetails.css';
+import '../styles/PropertyDetails.css';
 import h1 from '../images/h1.jpg';
 import h2 from '../images/h2.jpg';
 import h3 from '../images/h3.jpg';
