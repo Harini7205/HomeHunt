@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import homeImage from '../images/home.png';
-import { Link } from 'react-router-dom';
 
 function App() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -17,7 +17,7 @@ function App() {
     },
     leftSection: {
       flex: 1,
-      background: `url(${homeImage}) no-repeat center center`, // Set the image as the background
+      background: `url(${homeImage}) no-repeat center center`, 
       backgroundSize: '100%',
     },
     rightSection: {
@@ -55,7 +55,6 @@ function App() {
       borderRadius: '4px',
     },
     button: {
-      width: '100%',
       padding: '12px',
       backgroundColor: '#000',
       color: '#fff',
@@ -71,18 +70,23 @@ function App() {
       color: '#0000FF',
       cursor: 'pointer',
     },
-    roleSelection: {
-      marginTop: '20px',
-    },
     roleBtn: {
-      backgroundColor: '#7B1FA2',
-      color: 'white',
-      padding: '10px 20px',
-      margin: '5px',
-      border: 'none',
-      borderRadius: '4px',
+      color: 'black',
       cursor: 'pointer',
+      padding:'0',
+      margin:'0'
     },
+    checkBox:{
+      margin:'20px 0px',
+      display:'flex',
+      justifyContent:'center',
+      gap:'30px',
+    },
+    checkboxOption: {
+      display:'flex',
+      alignItems:'center',
+      gap:'10px'
+    }
   };
 
   return (
@@ -99,22 +103,53 @@ function App() {
 }
 
 function SignInPage({ togglePage, styles }) {
+  const [selectedRole, setSelectedRole] = useState({
+    houseOwner: false,
+    tenant: false,
+  });
+
+  const navigate = useNavigate();
+
+  const handleStateChange = (role) => {
+    setSelectedRole(prevState => ({
+      ...prevState,
+      [role]: !prevState[role],
+    }));
+  };
+
+  const handleLoginClick = (e) => {
+    e.preventDefault();
+    if (selectedRole.houseOwner) {
+      navigate('/dashboard');
+    } else if (selectedRole.tenant) {
+      navigate('/tenant-dashboard');
+    } else {
+      alert('Please select a role.');
+    }
+  };
+
   return (
     <div style={styles.formContainer}>
       <h2>Welcome</h2>
       <form>
         <input type="text" placeholder="Email Address / Mobile Number" style={styles.input} required />
         <input type="password" placeholder="Password" style={styles.input} required />
-        <button type="submit" style={styles.button}>Login</button>
+        <div className='checkbox' style={styles.checkBox}>
+          <div style={styles.checkboxOption}>
+            <input type="checkbox" checked={selectedRole.houseOwner} onChange={() => handleStateChange('houseOwner')} />
+            <p style={styles.roleBtn}>House Owner</p>
+          </div>
+          <div style={styles.checkboxOption}>
+            <input type="checkbox" checked={selectedRole.tenant} onChange={() => handleStateChange('tenant')} />
+            <p style={styles.roleBtn}>Tenant</p>
+          </div>
+        </div>        
+        <button type="submit" onClick={handleLoginClick} style={styles.button}>Login</button>
         <div style={styles.extraOptions}>
           <a href="/forgot" style={{ color: '#000' }}>Forgot Password?</a>
           <p>Don't have an account? <span onClick={togglePage} style={styles.link}>Sign Up Now</span></p>
         </div>
       </form>
-      <div style={styles.roleSelection}>
-        <Link to={'/dashboard'}><button style={styles.roleBtn}>House Owner</button></Link>
-        <button style={styles.roleBtn}>Tenant</button>
-      </div>
     </div>
   );
 }

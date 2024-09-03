@@ -13,7 +13,6 @@ import test1 from '../images/home-test-1.png';
 import test2 from '../images/home-test-2.png';
 import test3 from '../images/home-test-3.png';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FeaturedProperty from './FeaturedProperty';
 import Footer from './Footer';
 import Testimonial from './Testimonial';
@@ -27,7 +26,7 @@ function Home() {
         <div className='text-home-page'>
           <h2 className='catchy-text'>Live Where You Love</h2>
           <p className='subcaption'>Turning Houses Into Homes</p>
-          <Link to={'/signin'}>
+          <Link to={'/signin'} style={{ textDecoration: 'none' }}>
           <div className='home-page-button-container'>
             <button className='signup'>Sign Up</button>
             <button className='signin'>Sign In</button>
@@ -73,7 +72,6 @@ function Home() {
             <li style={{fontFamily:"Bold", fontSize:18}}>Trusted by Thousands</li>
 
           </ul>
-          <button className='learn-more-button'>Learn more <ArrowRightAltIcon style={{color:'white'}} /></button>
         </div>
       </div> 
       <div className='home-featured-properties'>

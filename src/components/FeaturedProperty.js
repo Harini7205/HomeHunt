@@ -21,7 +21,7 @@ function FeaturedProperty({img,title,desc,bedroom,bathroom,type,price}) {
             <p>Price</p>
             <p>{price}</p>
         </div>
-        <Link to={'/viewprop'}><button className='fp-view-button'>View Property Details</button></Link>
+        <Link to={'/viewprop'} style={{ textDecoration: 'none' }}><button className='fp-view-button'>View Property Details</button></Link>
       </div>
     </div>
   )

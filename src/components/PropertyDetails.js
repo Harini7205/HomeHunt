@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import '../styles/PropertyDetails.css';
 import h1 from '../images/h1.jpg';
 import h2 from '../images/h2.jpg';
@@ -6,14 +6,15 @@ import h3 from '../images/h3.jpg';
 import h4 from '../images/h4.jpg';
 import h5 from '../images/h5.jpg';
 import jon from '../images/home-test-1.png';
-
+import Footer from './Footer';
 
 const PropertyDetails = () => {
     
     const images = [h1, h2, h3, h4, h5];
-  
     const [selectedImage, setSelectedImage] = useState(images[0]);
-  
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scrolls to the top of the page
+    }, []);
   return (
     <div className="property-details-container">
       <div className="property-header">
@@ -116,7 +117,7 @@ const PropertyDetails = () => {
         </ul>
       </div>
       </div>
-      
+      <Footer />
     </div>
   );
 };
