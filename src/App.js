@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Home from './components/Home';
-import PropertyDetails from './components/PropertyDetails.js';
+import PropertyDetails from './components/PropertyDetails.jsx';
 import LoginSignup from './components/LoginSignup';
 import Dashboard from './components/Dashboard';
 
