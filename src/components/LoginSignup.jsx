@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import homeImage from '../images/home.png';
 
-function App() {
-  const [isSignUp, setIsSignUp] = useState(false);
+function LoginSignup() {
+  const [currentPage, setCurrentPage] = useState('signIn');
 
-  const togglePage = () => {
-    setIsSignUp(!isSignUp);
+  const togglePage = (page) => {
+    setCurrentPage(page);
   };
 
   const commonStyles = {
@@ -96,7 +96,9 @@ function App() {
       </div>
       <div style={commonStyles.rightSection}>
         <Link to={'/'}><button style={commonStyles.returnHomeBtn}>Return Home</button></Link>
-        {isSignUp ? <SignUpPage togglePage={togglePage} styles={commonStyles} /> : <SignInPage togglePage={togglePage} styles={commonStyles} />}
+        {currentPage === 'signIn' && <SignInPage togglePage={togglePage} styles={commonStyles} />}
+        {currentPage === 'signUp' && <SignUpPage togglePage={togglePage} styles={commonStyles} />}
+        {currentPage === 'forgotPassword' && <ForgotPasswordPage togglePage={togglePage} styles={commonStyles} />}
       </div>
     </div>
   );
@@ -146,8 +148,8 @@ function SignInPage({ togglePage, styles }) {
         </div>        
         <button type="submit" onClick={handleLoginClick} style={styles.button}>Login</button>
         <div style={styles.extraOptions}>
-          <a href="/forgot" style={{ color: '#000' }}>Forgot Password?</a>
-          <p>Don't have an account? <span onClick={togglePage} style={styles.link}>Sign Up Now</span></p>
+          <span onClick={() => togglePage('forgotPassword')} style={styles.link}>Forgot Password?</span>
+          <p>Don't have an account? <span onClick={()=>{togglePage('signUp')}} style={styles.link}>Sign Up Now</span></p>
         </div>
       </form>
     </div>
@@ -164,11 +166,28 @@ function SignUpPage({ togglePage, styles }) {
         <input type="password" placeholder="Password" style={styles.input} required />
         <button type="submit" style={styles.button}>Sign Up</button>
         <div style={styles.extraOptions}>
-          <p>Already a Member? <span onClick={togglePage} style={styles.link}>Log In Now</span></p>
+          <p>Already a Member? <span onClick={()=>{togglePage('signIn')}} style={styles.link}>Log In Now</span></p>
         </div>
       </form>
     </div>
   );
 }
 
-export default App;
+function ForgotPasswordPage({ togglePage, styles }) {
+  return (
+    <div style={styles.formContainer}>
+      <h2>Forgot Password</h2>
+      <form>
+        <input type="text" placeholder="Email Address / Mobile Number" style={styles.input} required />
+        <input type="password" placeholder="New Password" style={styles.input} required />
+        <input type="password" placeholder="Confirm Password" style={styles.input} required />
+        <button type="submit" style={styles.button}>Reset Password</button>
+        <div style={styles.extraOptions}>
+          <p><span onClick={() => togglePage('signIn')} style={styles.link}>Back to Login</span></p>
+        </div>
+      </form>
+    </div>
+  );
+}
+
+export default LoginSignup;

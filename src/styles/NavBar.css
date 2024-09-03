@@ -18,7 +18,9 @@
     justify-content: center;
     gap:30px;
 }
-.navbar-options a{
+.navbar-options p{
+    margin:0;
+    padding:0;
     text-decoration: none;
     color:black;
     font-size:18px;

@@ -5,6 +5,7 @@ import Home from './components/Home';
 import PropertyDetails from './components/PropertyDetails.jsx';
 import LoginSignup from './components/LoginSignup';
 import Dashboard from './components/Dashboard';
+import AboutUs from './components/AboutUs.jsx';
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
         <Route path="/dashboard" element={
           <>
           <Dashboard />
+          </>
+        } />
+        <Route path="/aboutus" element={
+          <>
+          <AboutUs />
           </>
         } />
       </Routes>

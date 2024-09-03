@@ -12,6 +12,7 @@
 .fp-row{
     display:flex;
     gap:10px;
+    margin:20px 0;
 }
 .fp-comp-num{
     background-color: black;
