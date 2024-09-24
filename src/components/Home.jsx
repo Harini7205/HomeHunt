@@ -110,10 +110,12 @@ function Home() {
         </div>
       </div>
       <div className='home-testimonials'>
+        <Link to={'/viewtestimonials'} style={{ textDecoration: 'none' }}>
         <div className='home-testimonial-title'>
           <h2 className='testimonial-title-home'>Testimonials</h2>
           <button className='home-testimonial-button'>View all</button>
         </div>
+        </Link>
         <div className='testimonials'>
           <Testimonial 
             img={test1}
