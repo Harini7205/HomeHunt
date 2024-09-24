@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import homeImage from '../images/home.png';
+import homeImage from '/public/images/home.png';
 
 function LoginSignup() {
   const [currentPage, setCurrentPage] = useState('signIn');

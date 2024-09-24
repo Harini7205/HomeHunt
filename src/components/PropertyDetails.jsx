@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
 import '../styles/propertydetails.css';
-import h1 from '../images/h1.jpg';
-import h2 from '../images/h2.jpg';
-import h3 from '../images/h3.jpg';
-import h4 from '../images/h4.jpg';
-import h5 from '../images/h5.jpg';
-import jon from '../images/home-test-1.png';
+import h1 from '/public/images/h1.jpg';
+import h2 from '/public/images/h2.jpg';
+import h3 from '/public/images/h3.jpg';
+import h4 from '/public/images/h4.jpg';
+import h5 from '/public/images/h5.jpg';
+import jon from '/public/images/home-test-1.png';
 import Footer from './Footer';
 
 const PropertyDetails = () => {
