@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 function TestimonialsPage() {
   return (
     <div className='testimonials-page' style={{
-      backgroundImage: 'url(../images/testimonial.jpg)',
+      backgroundImage: 'url()',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       height: '98vh',
