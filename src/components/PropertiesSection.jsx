@@ -1,5 +1,5 @@
 import React from 'react';
-import propertyImage from '/public/images/property.jpeg'; // Ensure this path is correct
+import propertyImage from '../images/property.jpeg'; // Ensure this path is correct
 import '../styles/PropertiesSection.css';
 
 const PropertiesSection = () => {
