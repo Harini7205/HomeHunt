@@ -6,6 +6,7 @@ import PropertyDetails from './components/PropertyDetails.jsx';
 import LoginSignup from './components/LoginSignup';
 import Dashboard from './components/Dashboard';
 import AboutUs from './components/AboutUs.jsx';
+import TestimonialsPage from './components/TestimonialsPage.jsx';
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
         <Route path="/aboutus" element={
           <>
           <AboutUs />
+          </>
+        } />
+        <Route path="/viewtestimonials" element={
+          <>
+          <TestimonialsPage />
           </>
         } />
       </Routes>
