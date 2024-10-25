@@ -26,12 +26,10 @@ function Home() {
         <div className='text-home-page'>
           <h2 className='catchy-text'>Live Where You Love</h2>
           <p className='subcaption'>Turning Houses Into Homes</p>
-          <Link to={'/signin'} style={{ textDecoration: 'none' }}>
           <div className='home-page-button-container'>
-            <button className='signup'>Sign Up</button>
-            <button className='signin'>Sign In</button>
-          </div>
-          </Link>
+            <Link to={'/signup'} style={{ textDecoration: 'none' }}><button className='signup'>Sign Up</button></Link>
+            <Link to={'/signin'} style={{ textDecoration: 'none' }}><button className='signin'>Sign In</button></Link>
+          </div>          
         </div> 
       </div>   
       <div className="home-services">
