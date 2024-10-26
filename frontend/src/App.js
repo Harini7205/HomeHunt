@@ -7,6 +7,8 @@ import LoginSignUpPage from './components/LoginSignup';
 import Dashboard from './components/Dashboard';
 import AboutUs from './components/AboutUs.jsx';
 import ResetPassword from './components/ResetPassword.jsx';
+import TestimonialsPage from './components/TestimonialsPage';
+import PropertyListing from './components/PropertyListing.js';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
+          <Route path="/viewtestimonials" element={<TestimonialsPage />} />
+          <Route path="/tenant-search" element={<PropertyListing />} />
         </Routes>
       </div>
     </Router>

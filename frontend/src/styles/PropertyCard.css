@@ -1,0 +1,105 @@
+.property-image-container {
+  width: 50%;
+  height: 915px;
+  overflow: hidden; /* Ensures any overflow from the image is hidden */
+  border-radius: 8px 0 0 8px; /* Matches the card’s border radius */
+}
+
+.property-image {
+  width:50%;
+  height: 915px;
+  object-fit: contain; /* Ensures the image covers the container */
+}
+
+
+.property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  width: 915px;
+  height: 344px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row; /* Change to row to align image and details side by side */
+  justify-content: space-between; /* Ensures space between the image and details */
+  align-items: flex start; /* Vertically centers the content */
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-image {
+    width: 344px; /* Fixed width for the image */
+    height: 100% ; /* Make the image take up full height of the card */
+    object-fit: contain; /* Ensures the image fills the space without distortion */
+    border-radius: 8px 0 0 8px; 
+  }
+
+
+.property-details {
+  width: 50%; /* Adjust the details to take up the remaining 50% */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.price-location {
+  text-align: center; /* Align price and location to the left */
+  padding:50px;
+}
+
+.property-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  margin-top:5px;
+}
+
+.property-location {
+  font-size: 14px;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  justify-content:center;
+}
+.property-location svg {
+  margin-right: 20px;
+}
+
+.property-overview {
+  margin-top: 0;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.overview-item .icon {
+  font-size: 20px;
+  color: #355f8f;
+  margin-bottom: 5px;
+}
+
+.overview-item p {
+  font-weight: bold;
+  margin: 0;
+}
+.property-overview {
+  margin-top: 20px;
+  text-align: center; /* Centers the "Overview" title */
+}

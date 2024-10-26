@@ -4,57 +4,57 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 const testimonials = [
   {
-    name: "Jane Smith",
+    name: "Akshaya",
     role: "Freelance Designer",
-    testimonial: "I've been using this web hosting service for a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!",
+    testimonial: "HomeHunt made my rental search in Chennai so simple! The website’s layout is intuitive, and I found a great place that met all my requirements within days. The support team was super helpful, guiding me through the paperwork. Can’t recommend it enough!",
     rating: 5,
-    image: "test4.png"
+    image: "person1.jpg"
   },
   {
-    name: "Tom Williams",
+    name: "Nikhil",
     role: "Software Developer",
-    testimonial: "I've been using this web hosting service for a few months now and overall it's been fine. The uptime has been good and I haven't had any major issues. The pricing is also reasonable. Nothing particularly stands out as exceptional, but it gets the job done.",
+    testimonial: "I was worried about finding the right rental in Coimbatore, but HomeHunt came through! The listings are accurate, and the detailed info about each property helped me make a quick decision. Plus, the response time of the support team is impressive. Definitely a 5-star experience!",
     rating: 3,
-    image: "test3.png"
+    image: "person2.jpg"
   },
   {
-    name: "Michael Brown",
+    name: "Pranav",
     role: "Online Entrepreneur",
-    testimonial: "I've been using this web hosting service for a few months and it's been nothing but problems. My website has gone down multiple times and the customer service has been unresponsive. I would not recommend this company.",
+    testimonial: "Renting has never been easier thanks to HomeHunt! I was able to narrow down my search with the easy filters, and I found an apartment in Madurai in no time. The support team answered all my questions quickly and made the entire process so smooth. Highly recommend!",
     rating: 2,
-    image: "test2.png"
+    image: "person4.jpg"
   },
   {
-    name: "Sarah Johnson",
+    name: "Sarah John",
     role: "Blogger",
-    testimonial: "I was a little hesitant to switch to a new web hosting company, but I'm glad I took the plunge. The control panel is user-friendly and I love the one-click installation for popular apps. Everything has been smooth sailing since I made the switch.",
+    testimonial: "Living in Tiruchirappalli, finding the right home for rent used to be a challenge until I tried HomeHunt. Their website has tons of listings, and it’s so easy to contact landlords directly. Customer service has been fantastic in resolving any queries I had. HomeHunt has definitely raised the bar!",
     rating: 5,
-    image: "test1.png"
+    image: "person3.jpg"
   }
 ];
 const cityProperties = [
   {
-    name: "New York",
+    name: "Chennai",
     properties: 8,
     image: "findprop1.png"
   },
   {
-    name: "Chicago",
+    name: "Coimbatore",
     properties: 2,
     image: "findprop2.png"
   },
   {
-    name: "Los Angeles",
+    name: "Madurai",
     properties: 1,
     image: "findprop3.png"
   },
   {
-    name: "Miami",
+    name: "Tiruchirapalli",
     properties: 2,
     image: "findprop4.png"
   },
   {
-    name: "Florida",
+    name: "Salem",
     properties: 3,
     image: "findprop5.png"
   }

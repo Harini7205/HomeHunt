@@ -117,21 +117,21 @@ function Home() {
         <div className='testimonials'>
           <Testimonial 
             img={test1}
-            name="Rodriguez Millo"
-            place="Puorto Lobos, Mexico"
+            name="Arun Prasad"
+            place="Madurai"
             content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
           />
           <Testimonial 
             img={test2}
-            name="Victenzy Markov"
-            place="Moscow, Russia"
-            content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
+            name="Kavya"
+            place="Hosur"
+            content="“The apartment I chose is fully furnished and feels like home. Couldn’t have asked for a better experience!”"
           />
           <Testimonial 
             img={test3}
-            name="Carla Newton"
-            place="Seattle, America"
-            content="“The services are totally great! they offered many options for me to stay that suit my budget. Also, the room is well-furnished.”"
+            name="Asmitha"
+            place="Kanyakumari"
+            content="“They have a wide selection, and the room I rented is exactly what I was looking for. The process was smooth and hassle-free!”"
           />
 
         </div>

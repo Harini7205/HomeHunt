@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import '../styles/propertydetails.css';
+import '../styles/PropertyDetails.css';
 import h1 from '../images/h1.jpg';
 import h2 from '../images/h2.jpg';
 import h3 from '../images/h3.jpg';
@@ -28,7 +28,7 @@ const PropertyDetails = () => {
         <div className='header-line-2'>
           <div className='line-2-prop-name'>
             <h2 className='seaside'>Seaside Serenity Villa</h2>
-            <p className='prop-loc-header'>Malibu, California</p>
+            <p className='prop-loc-header'>Pondicherry</p>
           </div>
           <div className='line-2-prop-price'>
             <h2 className='price1'>Price</h2>
