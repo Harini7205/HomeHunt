@@ -41,6 +41,37 @@ const PropertyForm = () => {
               <label>Price of the Property</label>
               <input type="text" placeholder="Text" />
             </div>
+            {/* New Fields Added Below */}
+            <div className="form-group">
+              <label>Description</label>
+              <textarea placeholder="Enter property description" rows="3"></textarea>
+            </div>
+            <div className="form-group">
+              <label>Number of Bedrooms</label>
+              <input type="number" placeholder="0" />
+            </div>
+            <div className="form-group">
+              <label>Number of Bathrooms</label>
+              <input type="number" placeholder="0" />
+            </div>
+            <div className="form-group">
+              <label>Size in Sq Ft</label>
+              <input type="number" placeholder="0" />
+            </div>
+            <div className="form-group">
+              <label>Type of House</label>
+              <select>
+                <option value="">Select</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="condo">Condo</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label>Parking</label>
+              <input type="text" placeholder="e.g. Garage, Street Parking" />
+            </div>
 
             <h2>Property Owner Details</h2>
             <div className="form-group">
