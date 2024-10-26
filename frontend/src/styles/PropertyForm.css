@@ -1,0 +1,139 @@
+/* Container for the entire page */
+.property-form-container {
+  display: flex;
+  height: 100vh;
+  background-color: #e6f7f7;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background-color: #2f2f2f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.profile-section {
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu {
+  margin-top: 20px;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+  color: #00adb5;
+}
+
+.logout-btn {
+  background-color: #00adb5;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #00a4a9;
+}
+
+/* Main form area styling */
+.main-form {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.upload-btn {
+  background-color: #f0b400;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background-color: #d09c00;
+}
+
+.authenticate-btn {
+  background-color: #7e00ff;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+/* Blue pip line for visual effect */
+.blue-pip-line {
+  width: 40px;           /* Adjust the width of the pip */
+  height: 5px;          /* Adjust the height of the pip */
+  background-color: #007BFF; /* Blue color for the pip */
+  border-radius: 3px;   /* Rounded corners */
+  margin: 10px 0;       /* Vertical spacing */
+}
+.authenticate-btn:hover {
+  background-color: #6b00d9;
+}
+
+
