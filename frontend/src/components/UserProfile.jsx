@@ -5,7 +5,7 @@ const UserProfile = () => {
   return (
     <div style={styles.profileContainer}>
       <img src={profilePic} alt="Profile" style={styles.profileImage} />
-      <p style={styles.profileName}>John Doe</p>
+      <p style={styles.profileName}>User</p>
     </div>
   );
 };

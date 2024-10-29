@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Filter.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function SidebarFilters({ selected, setSelected }) {
   const [isPriceActive, setIsPriceActive] = useState(false);
@@ -11,55 +13,73 @@ function SidebarFilters({ selected, setSelected }) {
     <div className="sidebarfilter">
       {/* Price Filter */}
       <div className="sidebarfilter-btn" onClick={() => setIsPriceActive(!isPriceActive)}>
-        Price <span className="fas fa-caret-down"></span>
+        Price <FontAwesomeIcon icon={faCaretDown} />
       </div>
       {isPriceActive && (
         <div className="sidebarfilter-content">
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 12000 })}>$12,000</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 150000 })}>$150,000</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 95000 })}>$95,000</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 175000 })}>$175,000</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 130000 })}>$130,000</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, price: 140000 })}>$140,000</div>
+          {[12000, 150000, 95000, 175000, 130000, 140000].map(price => (
+            <div
+              key={price}
+              className="sidebarfilter-item"
+              onClick={() => setSelected({ ...selected, price })}
+            >
+              ${price.toLocaleString()}
+            </div>
+          ))}
         </div>
       )}
 
       {/* Location Filter */}
       <div className="sidebarfilter-btn" onClick={() => setIsLocationActive(!isLocationActive)}>
-        Location <span className="fas fa-caret-down"></span>
+        Location <FontAwesomeIcon icon={faCaretDown} />
       </div>
       {isLocationActive && (
         <div className="sidebarfilter-content">
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, location: 'Los Angeles' })}>Los Angeles</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, location: 'New York' })}>New York</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, location: 'San Francisco' })}>San Francisco</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, location: 'Miami' })}>Miami</div>
+          {['Los Angeles', 'New York', 'San Francisco', 'Miami'].map(location => (
+            <div
+              key={location}
+              className="sidebarfilter-item"
+              onClick={() => setSelected({ ...selected, location })}
+            >
+              {location}
+            </div>
+          ))}
         </div>
       )}
 
       {/* Bedrooms Filter */}
       <div className="sidebarfilter-btn" onClick={() => setIsBedroomsActive(!isBedroomsActive)}>
-        Bedrooms <span className="fas fa-caret-down"></span>
+        Bedrooms <FontAwesomeIcon icon={faCaretDown} />
       </div>
       {isBedroomsActive && (
         <div className="sidebarfilter-content">
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, bedrooms: 1 })}>1 Bedroom</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, bedrooms: 2 })}>2 Bedrooms</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, bedrooms: 3 })}>3 Bedrooms</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, bedrooms: 4 })}>4 Bedrooms</div>
+          {[1, 2, 3, 4].map(bedrooms => (
+            <div
+              key={bedrooms}
+              className="sidebarfilter-item"
+              onClick={() => setSelected({ ...selected, bedrooms })}
+            >
+              {bedrooms} Bedroom{bedrooms > 1 ? 's' : ''}
+            </div>
+          ))}
         </div>
       )}
 
       {/* Area Filter */}
       <div className="sidebarfilter-btn" onClick={() => setIsAreaActive(!isAreaActive)}>
-        Area Range <span className="fas fa-caret-down"></span>
+        Area Range <FontAwesomeIcon icon={faCaretDown} />
       </div>
       {isAreaActive && (
         <div className="sidebarfilter-content">
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, area: '500-1000 sqft' })}>500-1000 sqft</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, area: '1000-1500 sqft' })}>1000-1500 sqft</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, area: '1500-2000 sqft' })}>1500-2000 sqft</div>
-          <div className="sidebarfilter-item" onClick={() => setSelected({ ...selected, area: '2000+ sqft' })}>2000+ sqft</div>
+          {['500-1000 sqft', '1000-1500 sqft', '1500-2000 sqft', '2000+ sqft'].map(area => (
+            <div
+              key={area}
+              className="sidebarfilter-item"
+              onClick={() => setSelected({ ...selected, area })}
+            >
+              {area}
+            </div>
+          ))}
         </div>
       )}
     </div>
@@ -67,3 +87,4 @@ function SidebarFilters({ selected, setSelected }) {
 }
 
 export default SidebarFilters;
+

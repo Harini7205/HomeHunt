@@ -139,7 +139,7 @@ function SignInPage({ togglePage, styles }) {
       if (data.role === 'houseOwner') {
         navigate('/dashboard');
       } else if (data.role === 'tenant') {
-        navigate('/tenant-dashboard');
+        navigate('/tenant-search');
       }
     } catch (error) {
       alert('Invalid credentials');
@@ -234,7 +234,7 @@ function SignUpPage({ togglePage, styles }) {
       if (data.role === 'houseOwner') {
         navigate('/dashboard');
       } else if (data.role === 'tenant') {
-        navigate('/tenant-dashboard');
+        navigate('/tenant-search');
       }
     } catch (error) {
       console.log(error);

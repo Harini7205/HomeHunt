@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 40px);
+    height: 90vh;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -36,7 +36,7 @@
     margin-top: 0; /* Removed top margin to minimize space */
   }
   
-  .menu-item {
+  .menu-item{
     padding: 10px 20px; /* Reduced padding for menu items */
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -44,7 +44,7 @@
     font-size: 16px; /* Adjust font size for better readability */
   }
   
-  .menu-item:hover {
+  .menu-item:hover{
     background-color: #444; /* Change background color on hover */
     border-radius: 8px; /* Adds some rounded corners on hover */
   }

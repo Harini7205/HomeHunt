@@ -1,0 +1,161 @@
+/* General Styling for Property Listing Page */
+body {
+    font-family: Arial, sans-serif;
+    margin-left:20px;
+    padding:100px;
+    background-color: #f8f9fa;
+}
+
+.property-listing-container {
+    display: flex;
+    justify-content: flex-start; /* Centers the content horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    padding: 250px; /* Adjust padding if needed */
+    margin-left: 250px;
+}
+
+/* Sidebar Filter */
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.sidebar input[type="text"], .sidebar select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.sidebar button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar button:hover {
+    background-color: #0056b3;
+}
+
+/* Property Listings */
+.property-listing {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Space between cards */
+    
+  }
+
+  .property-listing .property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 200px; /* Reduced the card height */
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+
+.property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 2px;
+}
+
+.property-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.property-location {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.property-price {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.property-features {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.property-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.property-features ul li {
+    display: flex;
+    align-items: center;
+}
+
+.property-features ul li i {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .property-listing-container {
+        flex-direction: column;
+    }
+
+    .property-card {
+        width: 100%;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .property-card {
+        width: calc(50% - 20px);
+    }
+}

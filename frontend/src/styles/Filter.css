@@ -1,66 +1,90 @@
-/* Container that holds the entire sidebar filter */
 .sidebarfilter {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 250px;
-  background-color: #f8f8f8;
-  padding: 100px;
-  /* Updated box-shadow for larger width and height */
-  box-shadow: 20px 0 20px 0 rgba(248, 248, 248, 0.925); 
-
+  background-color: #ffffff; /* Clean white background */
+  padding: 60px 20px 20px; /* Add top padding to move all content down */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
   overflow-y: auto;
   box-sizing: border-box;
   z-index: 1000;
+  transition: background-color 0.3s ease; /* Transition for background color */
 }
 
 
-/* Style for the filter button/title */
 .sidebarfilter-btn {
-  background-color: #f9fafc; /* Blue background */
-  color: #0a0a0af5;
-  padding: 15px; /* Padding */
-  font-size: 18px; /* Font size */
+  background-color: #90e1e7; /* Bootstrap primary blue */
+  color: white; /* White text for contrast */
+  padding: 10px; /* Reduced padding */
+  font-size: 16px; /* Slightly smaller font size */
   font-weight: bold; /* Bold text */
   text-align: center; /* Centered text */
   border-radius: 5px; /* Rounded corners */
-  margin-bottom: 20px; /* Space below the button */
+  margin-bottom: 20px; /* Increased space below the button */
   cursor: pointer; /* Pointer cursor on hover */
-  /* Increases the width of the shadow */
-  box-shadow: 40px 0 20px 0 rgb(245, 245, 245); /* Wider shadow to the right */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
 }
 
+.sidebarfilter-btn:hover {
+  background-color: #90e1e7; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
 
-/* Container for the filter items */
 .sidebarfilter-content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; /* Allow wrapping of boxes */
   gap: 10px; /* Space between items */
+  padding: 10px;
 }
 
-/* Individual filter items */
 .sidebarfilter-item {
-  background-color: #e0e0e0; /* Light grey background */
-  padding: 12px; /* Padding */
+  background-color: #f0f0f0; /* Light grey background */
+  padding: 5px 10px; /* Reduce padding */
   border-radius: 5px; /* Rounded corners */
-  text-align: center; /* Centered text */
-  cursor: pointer; /* Pointer cursor on hover */
-  color: #0f0f0f;
-  height:50px;
-  width:100px; 
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, transform 0.2s;
+  width: fit-content; /* Two boxes per row with gap */
+  box-sizing: border-box;
+}
+.sidebarfilter-item:hover {
+  background-color: #e0e0e0; /* Darker grey on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  border-color: #bbb; /* Add border color on hover */
 }
 
-/* Hover effect for filter items */
-.sidebarfilter-item:hover {
-  background-color: #918f8f;
-  width: 100px;
-  height:50px;
-}
 select {
   box-shadow: 10px 14px 8px 10px rgba(0, 0, 0, 0.1); 
 }
+
 .sidebarfilter-spacer {
   width: 20px; /* Adjust the width as needed */
   height: 100%;
+}
+
+.clear-filters{
+  background-color: #90e1e7; /* Bootstrap primary blue */
+  color: white; /* White text for contrast */
+  padding: 10px; /* Reduced padding */
+  font-size: 16px; /* Slightly smaller font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Centered text */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 20px; /* Increased space below the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: background-color 0.3s, transform 0.2s;
+  background-color: red;
+  border:none;
+  outline:none;
+}
+
+.clear-filters:hover {
+  background-color: red; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect */
 }

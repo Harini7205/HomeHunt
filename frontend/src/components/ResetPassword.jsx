@@ -9,21 +9,17 @@ function ResetPassword() {
   const [message, setMessage] = useState('');
 
   const resetToken = searchParams.get('token');
-
   const handleResetPasswordClick = async (e) => {
     e.preventDefault();
-
     if (newPassword !== confirmPassword) {
       setMessage('Passwords do not match.');
       return;
     }
-
     try {
       const response = await axios.post('http://localhost:5000/api/auth/reset-password', {
         token: resetToken,
         password: newPassword,
       });
-
       if (response.data.success) {
         setMessage('Password has been reset successfully.');
       } else {

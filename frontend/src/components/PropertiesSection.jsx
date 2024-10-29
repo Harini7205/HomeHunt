@@ -20,12 +20,12 @@ const PropertiesSection = () => {
       <h2 className="properties-heading">Properties</h2>
       <div className="properties-grid">
         {properties.map((property, index) => (
-          <div key={index} className="property-card">
-            <img src={propertyImage} alt="Property" className="property-image" />
-            <div className="property-details">
-              <h3 className="property-name">{property.name}</h3>
-              <p className="property-price">{property.price}</p>
-              <p className="property-location">{property.location}</p>
+          <div key={index} className="ps-property-card">
+            <img src={propertyImage} alt="Property" className="ps-property-image" />
+            <div className="ps-property-details">
+              <h3 className="ps-property-name">{property.name}</h3>
+              <p className="ps-property-price">{property.price}</p>
+              <p className="ps-property-location">{property.location}</p>
             </div>
           </div>
         ))}

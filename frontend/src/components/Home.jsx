@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import NavBar from './NavBar';
 import '../styles/Home.css';
 import services1 from '../images/home-services-1.png';
@@ -17,8 +17,24 @@ import FeaturedProperty from './FeaturedProperty';
 import Footer from './Footer';
 import Testimonial from './Testimonial';
 import {Link} from "react-router-dom";
+import {useAuth} from './AuthContext';
+import {useNavigate} from 'react-router-dom';
 
 function Home() {
+  const { isLoggedIn } = useAuth();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (isLoggedIn) {
+      navigate('/all-properties'); // Navigate to the "All Properties" page
+    } else {
+      alert('Please log in first to view all properties.');
+      navigate('/signin'); // Optionally redirect to the login page
+    }
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='full-home-page'>
       <div className='home'>
@@ -75,7 +91,7 @@ function Home() {
       <div className='home-featured-properties'>
         <div className='home-fp-title'>
           <h2 className='fp-title-home'>Featured Properties</h2>
-          <button className='home-fp-button'>View all properties</button>
+          <button className='home-fp-button' onClick={handleClick}>View all properties</button>
         </div>
         <div className='featured-properties'>
         <FeaturedProperty 
@@ -85,7 +101,9 @@ function Home() {
           bedroom="4"
           bathroom="3"
           type="Villa"
-          price="$550,000"
+          price="Rs.550,000"
+          size='2500'
+          location='Pondicherry'
         />
         <FeaturedProperty 
           img={fp3} 
@@ -95,15 +113,19 @@ function Home() {
           bathroom="2"
           type="Villa"
           price="$300,000"
+          size='1800'
+          location='Chennai'
         />
         <FeaturedProperty 
           img={fp2} 
           title="Rustic Retreat Cottage"
-          desc="An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... Read More"
+          desc="An elegant 3-bedroom, 2-bathroom townhouse in a gated community... Read More"
           bedroom="3"
           bathroom="3"
           type="Villa"
           price="$450,000"
+          size='1200'
+          location='Kanyakumari'
         />
         </div>
       </div>

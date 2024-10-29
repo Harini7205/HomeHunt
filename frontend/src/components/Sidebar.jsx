@@ -1,22 +1,21 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import UserProfile from './UserProfile';
 import '../styles/Sidebar.css'; // Import the CSS file for sidebar styles
+import LogOut from './LogOut';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <UserProfile />
       <div className="menu-items">
-        <div className="menu-item">Dashboard</div>
+        <Link to="/dashboard" style={{textDecoration:'none', color:"white"}}><div className="menu-item">Dashboard</div></Link>
         <div className="menu-item">Properties</div>
-        <div className="menu-item">Updates</div>
-        <div className="menu-item">Latest</div>
-        <div className="menu-item">Statistics</div>
-        <div className="menu-item">Notifications</div>
+        <Link to="/upload-property" style={{textDecoration:'none', color:"white"}}><div className="menu-item">Upload New Property</div></Link>
       </div>
       <div className="menu-items">
         <div className="menu-item">Help & Support</div>
-        <div className="menu-item">Log Out</div>
+        <LogOut />
       </div>
     </div>
   );
