@@ -16,15 +16,15 @@ It offers advanced property search, ML-based recommendations, secure authenticat
 
 ---
 
-## **🛠 Tech Stack**
+## **Tech Stack**
 
-**Frontend:** : React.js  
-**Backend:** : Node.js, Express.js  
-**Database:** : MongoDB  
-**AI & ML:** : Scikit-Learn, PyTorch  
+**Frontend:** React.js  
+**Backend:** Node.js, Express.js  
+**Database:** MongoDB  
+**AI & ML:** Scikit-Learn, PyTorch  
 
 ---
 
-## **📊 Performance**
+## **Performance**
 - Frontend Response: ~10ms  
 - Backend Response: ~13ms  
