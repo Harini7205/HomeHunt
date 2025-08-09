@@ -2,7 +2,7 @@
 
 ## **Overview**
 The Rental House Management System is a full-stack web application designed to bridge the gap between house owners and tenants.  
-It offers advanced property search, ML-based recommendations, secure authentication, and easy property uploads, making the rental process faster, smarter, and more reliable.
+It is a group project developed as part of our coursework at college, giving us an exposure to the MERN stack.
 
 ---
 
@@ -11,7 +11,7 @@ It offers advanced property search, ML-based recommendations, secure authenticat
 - **Advanced Property Search** – Filters by location, budget, number of bedrooms, and move-in date.  
 - **Property Listings** – Owners can upload properties with descriptions, images, and documents.  
 - **Recommendation Engine** – ML-powered suggestions using K-Nearest Neighbors (KNN).  
-- **Document Authentication** – Deep learning-based property document verification.  
+- **Document Authentication** – Deep learning-based property document verification (not yet integrated with the main application). 
 - **Direct Communication** – Tenants can contact owners via email or phone.
 
 ---
